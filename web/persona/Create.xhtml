@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PersonaCreateDlg" widgetVar="PersonaCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePersonaTitle}">
+            <h:form id="PersonaCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{personaController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSid}" for="PRSid" />
+                        <p:inputText id="PRSid" value="#{personaController.selected.PRSid}" title="#{bundle.CreatePersonaTitle_PRSid}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSid}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSNombres}" for="PRSNombres" />
+                        <p:inputText id="PRSNombres" value="#{personaController.selected.PRSNombres}" title="#{bundle.CreatePersonaTitle_PRSNombres}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSNombres}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSApellido1}" for="PRSApellido1" />
+                        <p:inputText id="PRSApellido1" value="#{personaController.selected.PRSApellido1}" title="#{bundle.CreatePersonaTitle_PRSApellido1}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSApellido1}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSApellido2}" for="PRSApellido2" />
+                        <p:inputText id="PRSApellido2" value="#{personaController.selected.PRSApellido2}" title="#{bundle.CreatePersonaTitle_PRSApellido2}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSApellido2}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSFechaNacimiento}" for="PRSFechaNacimiento" />
+                        <p:calendar id="PRSFechaNacimiento" pattern="MM/dd/yyyy" value="#{personaController.selected.PRSFechaNacimiento}" title="#{bundle.EditPersonaTitle_PRSFechaNacimiento}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSFechaNacimiento}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSFechaRegistro}" for="PRSFechaRegistro" />
+                        <p:calendar id="PRSFechaRegistro" pattern="MM/dd/yyyy" value="#{personaController.selected.PRSFechaRegistro}" title="#{bundle.EditPersonaTitle_PRSFechaRegistro}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSFechaRegistro}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSSexo}" for="PRSSexo" />
+                        <p:inputText id="PRSSexo" value="#{personaController.selected.PRSSexo}" title="#{bundle.CreatePersonaTitle_PRSSexo}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSSexo}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSTelefono}" for="PRSTelefono" />
+                        <p:inputText id="PRSTelefono" value="#{personaController.selected.PRSTelefono}" title="#{bundle.CreatePersonaTitle_PRSTelefono}" />
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSCorreo}" for="PRSCorreo" />
+                        <p:inputText id="PRSCorreo" value="#{personaController.selected.PRSCorreo}" title="#{bundle.CreatePersonaTitle_PRSCorreo}" />
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSEntidad}" for="PRSEntidad" />
+                        <p:inputText id="PRSEntidad" value="#{personaController.selected.PRSEntidad}" title="#{bundle.CreatePersonaTitle_PRSEntidad}" required="true" requiredMessage="#{bundle.CreatePersonaRequiredMessage_PRSEntidad}"/>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PKUSRId}" for="PKUSRId" />
+                        <p:selectOneMenu id="PKUSRId" value="#{personaController.selected.PKUSRId}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PKUSRId}">
+                            <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"
+                                           var="PKUSRIdItem"
+                                           itemValue="#{PKUSRIdItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreatePersonaLabel_PRSEstado}" for="PRSEstado" />
+                        <p:selectBooleanCheckbox id="PRSEstado" value="#{personaController.selected.PRSEstado}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSEstado}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{personaController.create}" value="#{bundle.Save}" update="display,:PersonaListForm:datalist,:growl" oncomplete="handleSubmit(args,'PersonaCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PersonaCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

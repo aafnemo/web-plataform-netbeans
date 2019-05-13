@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ActividadViewDlg" widgetVar="ActividadViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewActividadTitle}">
+            <h:form id="ActividadViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{actividadController.selected != null}">
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTid}"/>
+                        <h:outputText value="#{actividadController.selected.ACTid}" title="#{bundle.ViewActividadTitle_ACTid}"/>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTDetalle}"/>
+                        <h:outputText value="#{actividadController.selected.ACTDetalle}" title="#{bundle.ViewActividadTitle_ACTDetalle}"/>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTEstado}"/>
+                        <p:selectBooleanCheckbox value="#{actividadController.selected.ACTEstado}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTFechaFinal}"/>
+                        <h:outputText value="#{actividadController.selected.ACTFechaFinal}" title="#{bundle.ViewActividadTitle_ACTFechaFinal}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTFechaInicio}"/>
+                        <h:outputText value="#{actividadController.selected.ACTFechaInicio}" title="#{bundle.ViewActividadTitle_ACTFechaInicio}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTLocalizacion}"/>
+                        <h:outputText value="#{actividadController.selected.ACTLocalizacion}" title="#{bundle.ViewActividadTitle_ACTLocalizacion}"/>
+                        <h:outputText value="#{bundle.ViewActividadLabel_ACTNombre}"/>
+                        <h:outputText value="#{actividadController.selected.ACTNombre}" title="#{bundle.ViewActividadTitle_ACTNombre}"/>
+                        <h:outputText value="#{bundle.ViewActividadLabel_PKUSRId}"/>
+                        <h:outputText value="#{actividadController.selected.PKUSRId}" title="#{bundle.ViewActividadTitle_PKUSRId}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="ActividadViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

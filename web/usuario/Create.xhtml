@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="UsuarioCreateDlg" widgetVar="UsuarioCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateUsuarioTitle}">
+            <h:form id="UsuarioCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{usuarioController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateUsuarioLabel_PKUSRId}" for="PKUSRId" />
+                        <p:inputText id="PKUSRId" value="#{usuarioController.selected.PKUSRId}" title="#{bundle.CreateUsuarioTitle_PKUSRId}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_PKUSRId}"/>
+                        <p:outputLabel value="#{bundle.CreateUsuarioLabel_USREstado}" for="USREstado" />
+                        <p:selectBooleanCheckbox id="USREstado" value="#{usuarioController.selected.USREstado}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_USREstado}"/>
+                        <p:outputLabel value="#{bundle.CreateUsuarioLabel_USRPassword}" for="USRPassword" />
+                        <p:inputTextarea rows="4" cols="30" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.CreateUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_USRPassword}"/>
+                        <p:outputLabel value="#{bundle.CreateUsuarioLabel_FKTUId}" for="FKTUId" />
+                        <p:selectOneMenu id="FKTUId" value="#{usuarioController.selected.FKTUId}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_FKTUId}">
+                            <f:selectItems value="#{tipoUsuarioController.itemsAvailableSelectOne}"
+                                           var="FKTUIdItem"
+                                           itemValue="#{FKTUIdItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{usuarioController.create}" value="#{bundle.Save}" update="display,:UsuarioListForm:datalist,:growl" oncomplete="handleSubmit(args,'UsuarioCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="UsuarioCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
