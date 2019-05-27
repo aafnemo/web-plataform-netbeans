@@ -31,14 +31,14 @@
                         <p:outputLabel value="#{bundle.EditPersonaLabel_PRSTelefono}" for="PRSTelefono" />
                         <p:inputText id="PRSTelefono" value="#{personaController.selected.PRSTelefono}" title="#{bundle.EditPersonaTitle_PRSTelefono}" />
                         <p:outputLabel value="#{bundle.EditPersonaLabel_PKUSRId}" for="PKUSRId" />
-                        <p:outputLabel value="#{bundle.EditPersonaLabel_PRSEntidad}" for="PRSEntidad" />
-                        <p:inputText id="PRSEntidad" value="#{personaController.selected.PRSEntidad}" title="#{bundle.EditPersonaTitle_PRSEntidad}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSEntidad}"/>
                         <p:selectOneMenu id="PKUSRId" value="#{personaController.selected.PKUSRId}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PKUSRId}">
                             <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
                             <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"
                                            var="PKUSRIdItem"
                                            itemValue="#{PKUSRIdItem}"/>
                         </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.EditPersonaLabel_PRSEntidad}" for="PRSEntidad" />
+                        <p:inputText id="PRSEntidad" value="#{personaController.selected.PRSEntidad}" title="#{bundle.EditPersonaTitle_PRSEntidad}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSEntidad}"/>
                         <p:outputLabel value="#{bundle.EditPersonaLabel_PRSEstado}" for="PRSEstado" />
                         <p:selectBooleanCheckbox id="PRSEstado" value="#{personaController.selected.PRSEstado}" required="true" requiredMessage="#{bundle.EditPersonaRequiredMessage_PRSEstado}"/>
                     </p:panelGrid>

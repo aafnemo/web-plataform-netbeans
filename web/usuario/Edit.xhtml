@@ -11,13 +11,13 @@
         <p:dialog id="UsuarioEditDlg" widgetVar="UsuarioEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditUsuarioTitle}">
             <h:form id="UsuarioEditForm">
                 <h:panelGroup id="display">
-                    <p:panelGrid columns="2" rendered="#{usuarioController.selected != null}">
+                    <p:panelGrid columns="1" rendered="#{usuarioController.selected != null}">
                         <p:outputLabel value="#{bundle.EditUsuarioLabel_PKUSRId}" for="PKUSRId" />
                         <p:inputText id="PKUSRId" value="#{usuarioController.selected.PKUSRId}" title="#{bundle.EditUsuarioTitle_PKUSRId}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_PKUSRId}"/>
                         <p:outputLabel value="#{bundle.EditUsuarioLabel_USREstado}" for="USREstado" />
                         <p:selectBooleanCheckbox id="USREstado" value="#{usuarioController.selected.USREstado}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_USREstado}"/>
                         <p:outputLabel value="#{bundle.EditUsuarioLabel_USRPassword}" for="USRPassword" />
-                        <p:inputTextarea rows="4" cols="30" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.EditUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_USRPassword}"/>
+                        <p:password weakLabel="Débil" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.EditUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_USRPassword}"/>
                         <p:outputLabel value="#{bundle.EditUsuarioLabel_FKTUId}" for="FKTUId" />
                         <p:selectOneMenu id="FKTUId" value="#{usuarioController.selected.FKTUId}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_FKTUId}">
                             <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>

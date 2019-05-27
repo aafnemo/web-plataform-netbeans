@@ -1,61 +1,186 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>AFNEMO :: Inicio</title>
-        <link rel="icon" type="image/png" href="images/Icono.ico" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css"
-              href="vendor2/bootstrap/css/bootstrap.min.css" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css"
-              href="fonts2/font-awesome-4.7.0/css/font-awesome.min.css" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css"
-              href="vendor2/animate/animate.css" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css"
-              href="vendor2/select2/select2.min.css" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="css/util.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <!--===============================================================================================-->
-        <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous" />
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <link
-            href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-            rel="stylesheet" />
-        <link href="css/mystyle.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="icon" type="image/png" href="images/Icono.ico" />
-        <h:outputStylesheet name="css/jsfcrud.css"/>
-    </h:head>
-    <h:body>
-        <div id = "header" >
-            <div id = "header1">
-                <span><img src="images/Logo.jpg" width="300px"/></span>
-                <span id = "title_header">ASOCIACIÓN AFROAMERICANA NEFTALÍ MOSQUERA </span>
-            </div>
-            <div id = "nav-index">
-                <span>
-                    <h:link outcome="login" value="Iniciar Sesión" />
-                </span>
-            </div>
-        </div>      
-    </h:body>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      lang="es">
+    <head>
+    </head>
+    <ui:composition template="template2.xhtml">
+        <ui:define name="title">Inicio</ui:define>
+        <ui:define name="body">
+            <!-- HOME -->
+            <section id="home">
+                <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                        <div class="item item-first">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="col-md-6 col-sm-12">
+                                        <h1>Asociación Afrocultural AFNEMO</h1>
+                                        <h3>Somos una fundación que apoya a toda la comunidad afrodescendiente y de escasos recursos</h3>
+                                        <a href="#feature" class="section-btn btn btn-default smoothScroll">Descubrir más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item item-second">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="col-md-6 col-sm-12">
+                                        <h1>Asociación Afrocultural AFNEMO</h1>
+                                        <h3>Somos una fundación que apoya a toda la comunidad afrodescendiente y de escasos recursos</h3>
+                                        <a href="#feature" class="section-btn btn btn-default smoothScroll">Descubrir más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item item-third">
+                            <div class="caption">
+                                <div class="container">
+                                    <div class="col-md-6 col-sm-12">
+                                        <h1>Asociación Afrocultural AFNEMO</h1>
+                                        <h3>Somos una fundación que apoya a toda la comunidad afrodescendiente y de escasos recursos</h3>
+                                        <a href="#feature" class="section-btn btn btn-default smoothScroll">Descubrir más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- FEATURE -->
+            <section id="feature">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-4">
+                            <div class="feature-thumb">
+                                <span>01</span>
+                                <h3>Nuestras Actvidades</h3>
+                                <p>Ofrecemos actividades culturales como.....</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <div class="feature-thumb">
+                                <span>02</span>
+                                <h3>Books Library</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <div class="feature-thumb">
+                                <span>03</span>
+                                <h3>Certified Teachers</h3>
+                                <p>templatemo provides a wide variety of free Bootstrap Templates for you. Please tell your friends about us. Thank you.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABOUT -->
+            <section id="about">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="about-info">
+                                <h2>Start your journey to a better life with online practical courses</h2>
+
+                                <figure>
+                                    <span><i class="fa fa-users"></i></span>
+                                    <figcaption>
+                                        <h3>Professional Trainers</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <span><i class="fa fa-certificate"></i></span>
+                                    <figcaption>
+                                        <h3>International Certifications</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <span><i class="fa fa-bar-chart-o"></i></span>
+                                    <figcaption>
+                                        <h3>Free for 3 months</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-1 col-md-4 col-sm-12">
+                            <div class="entry-form">
+                                <form action="#" method="post">
+                                    <h2>Signup today</h2>
+                                    <input type="text" name="full name" class="form-control" placeholder="Full name" required=""/>
+
+                                    <input type="email" name="email" class="form-control" placeholder="Your email address" required=""/>
+
+                                    <input type="password" name="password" class="form-control" placeholder="Your password" required=""/>
+
+                                    <button class="submit-btn form-control" id="form-submit">Get started</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- CONTACT -->
+            <section id="contact">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12">
+                            <form id="contact-form" role="form" action="" method="post">
+                                <div class="section-title">
+                                    <h2>Contactenos <small>Cuentanos tus opiniones y observaciones!</small></h2>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12">
+                                    <input type="text" class="form-control" placeholder="Ingrese su nombre completo" name="name" required=""/>
+
+                                    <input type="email" class="form-control" placeholder="Ingrese su dirección de correo" name="email" required="true"/>
+
+                                    <textarea class="form-control" rows="6" placeholder="Cuentanos tú mensaje" name="message" required="true"></textarea>
+                                </div>
+
+                                <div class="col-md-4 col-sm-12">
+                                    <input type="submit" class="form-control" name="send message" value="Enviar Mensaje"/>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <div class="contact-image">
+                                <img src="images/AfroAbout.png" class="img-responsive" alt="Smiling Two Girls"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>       
+        </ui:define>
+    </ui:composition>
+
 </html>
 

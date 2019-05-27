@@ -11,13 +11,13 @@
         <p:dialog id="UsuarioViewDlg" widgetVar="UsuarioViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewUsuarioTitle}">
             <h:form id="UsuarioViewForm">
                 <h:panelGroup id="display">
-                    <p:panelGrid columns="2" rendered="#{usuarioController.selected != null}">
+                    <p:panelGrid columns="" rendered="#{usuarioController.selected != null}">
                         <h:outputText value="#{bundle.ViewUsuarioLabel_PKUSRId}"/>
                         <h:outputText value="#{usuarioController.selected.PKUSRId}" title="#{bundle.ViewUsuarioTitle_PKUSRId}"/>
                         <h:outputText value="#{bundle.ViewUsuarioLabel_USREstado}"/>
                         <p:selectBooleanCheckbox value="#{usuarioController.selected.USREstado}" disabled="true"/>
-                        <h:outputText value="#{bundle.ViewUsuarioLabel_USRPassword}"/>
-                        <h:outputText value="#{usuarioController.selected.USRPassword}" title="#{bundle.ViewUsuarioTitle_USRPassword}"/>
+                        <!--<h:outputText value="#{bundle.ViewUsuarioLabel_USRPassword}"/>
+                        <h:outputText value="#{usuarioController.selected.USRPassword}" title="#{bundle.ViewUsuarioTitle_USRPassword}"/>-->
                         <h:outputText value="#{bundle.ViewUsuarioLabel_FKTUId}"/>
                         <h:outputText value="#{usuarioController.selected.FKTUId}" title="#{bundle.ViewUsuarioTitle_FKTUId}"/>
                     </p:panelGrid>

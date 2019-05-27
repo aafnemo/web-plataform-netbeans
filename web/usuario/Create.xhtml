@@ -11,13 +11,14 @@
         <p:dialog id="UsuarioCreateDlg" widgetVar="UsuarioCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateUsuarioTitle}">
             <h:form id="UsuarioCreateForm">
                 <h:panelGroup id="display">
-                    <p:panelGrid columns="2" rendered="#{usuarioController.selected != null}">
+                    <p:panelGrid columns="1" rendered="#{usuarioController.selected != null}">
                         <p:outputLabel value="#{bundle.CreateUsuarioLabel_PKUSRId}" for="PKUSRId" />
                         <p:inputText id="PKUSRId" value="#{usuarioController.selected.PKUSRId}" title="#{bundle.CreateUsuarioTitle_PKUSRId}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_PKUSRId}"/>
                         <p:outputLabel value="#{bundle.CreateUsuarioLabel_USREstado}" for="USREstado" />
                         <p:selectBooleanCheckbox id="USREstado" value="#{usuarioController.selected.USREstado}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_USREstado}"/>
                         <p:outputLabel value="#{bundle.CreateUsuarioLabel_USRPassword}" for="USRPassword" />
-                        <p:inputTextarea rows="4" cols="30" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.CreateUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_USRPassword}"/>
+                        <!--<p:inputTextarea rows="4" cols="30" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.CreateUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_USRPassword}"/>-->
+                        <p:password weakLabel="Débil" id="USRPassword" value="#{usuarioController.selected.USRPassword}" title="#{bundle.CreateUsuarioTitle_USRPassword}" required="true" requiredMessage="#{bundle.CreateUsuarioRequiredMessage_USRPassword}"/>
                         <p:outputLabel value="#{bundle.CreateUsuarioLabel_FKTUId}" for="FKTUId" />
                         <p:selectOneMenu id="FKTUId" value="#{usuarioController.selected.FKTUId}" required="true" requiredMessage="#{bundle.EditUsuarioRequiredMessage_FKTUId}">
                             <f:selectItems value="#{tipoUsuarioController.itemsAvailableSelectOne}"

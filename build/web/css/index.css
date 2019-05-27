@@ -2,10 +2,7 @@
 
 * {
     font-family: sans-serif;
-    margin-right: 0px;
-    font-size: large;
 }
-
 .degrees {
     color: maroon;
 }
@@ -20,15 +17,51 @@
 .icon_weather {
     margin: 10px;
 }
-
-div {
+.div-class{
     margin-left: 8px;
 }
-
 .background_header {
     background: url("images/background-body.jpg") 100% 100% no-repeat;
 }
+.link-bar{
+    margin-left: 12px
+}
+.nav-items{
+    font-size: 12px;
+}
+#nav-index {
+    align-items: center;
+    background: #DC7633;
+    height:50px;
+    font-size: 30px;
+}
 
+#title_header{
+    font-size: 37px;
+    font-family: 'MonoSpace';
+    width: 20px;
+    height: 140px;
+    margin-left: 60px;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: justify;
+}
+#img-footer{
+    margin-top: 5px;
+}
+#mii-footer{
+    text-align: center;
+    background: #3a4f54;
+    color: #fff;
+}
 @import
 url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700);
 
@@ -52,29 +85,7 @@ li {
     list-style: none
 }
 
-a {
-    color: #00ff00;
-}
 
-a:focus, a:hover {
-    text-decoration: none;
-    -webkit-transition: .3s ease;
-    -o-transition: .3s ease;
-    transition: .2s ease
-}
-
-a:focus {
-    outline: 0
-}
-
-a:hover, a:active {
-    color: red;
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #6c633c;
-}
 
 img {
     max-width: 100%

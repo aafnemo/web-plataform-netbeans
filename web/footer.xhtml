@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+
+    </head>
+    <ui:composition>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 70
+                        || document.documentElement.scrollTop > 70) {
+                    document.getElementById("go-top").style.display = "block";
+                } else {
+                    document.getElementById("go-top").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info footer-items">
+                            <div class="section-title">
+                                <img src="images/Logo.jpg" alt="Imagen no soportada"
+                                     height="120px" id="img-footer"/>
+                                <div class="footer-items">
+                                    Asociación Afrocultural Neftalí Mosquera
+                                </div>
+                                <h2>Sede</h2>
+                                <p> 
+                                    La Asociación Afrocultural Neftalí Mosquera "AFNEMO", es una asociación sin ánimo de lucro. Resolución 057 del Ministerio del Interior
+                                </p>
+                            </div>
+                            <address>
+                                <p>Calle 22 sur # 14 A 99,<br/> Bogotá, Colombia.</p>
+                            </address>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                            <div class="copyright-text"> 
+                                <p>Copyright  2019 Asociación Afrocultural Neftalí Mosquera</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info">
+                            <div class="section-title">
+                                <h2>Información de Contacto</h2>
+                            </div>
+                            <address class="footer-items">
+                                <li><span class="icon icon-phone"></span> Contacto: <a
+                                        href="tel:3114965531"><br />(+57) 311-496-5531<br />
+                                        (+57) 314-393-3671<br /> (+57) 316-576-6768</a></li>
+                                <li><span class="icon icon-envelope-alt"></span> Correo: <a
+                                        href="mailto:afnemocontacto@gmail.com">afnemocontacto@gmail.com</a></li>
+                                <li><span class="icon icon-github-sign"></span> Github: <a
+                                        href="https://github.com/aafnemo" target="_blank">aafnemo</a></li>
+                            </address>                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="go-top" class="go_top" onclick="topFunction()">
+                <span class="icon-arrow-up"></span>
+            </div>
+        </footer>
+        <div id="mii-footer" class="copyright-text">
+            © 2019 Asociación Afrocultural Neftalí Mosquera. Todos los derechos reservados.
+        </div>
+    </ui:composition>
+</html>
